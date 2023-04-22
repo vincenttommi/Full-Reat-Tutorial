@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    {/* rendering our template in  index.js from app.js */}
+    {/* rendering our firts component form our app template in  index.js from app.js */}
   </React.StrictMode>
 );
 
