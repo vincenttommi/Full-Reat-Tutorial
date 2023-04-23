@@ -16,6 +16,8 @@ const Home = () => {
 return (
     <div className="Home">  
     <BlogLists blogs={blogs} title="all blogs!"/>
+    <BlogLists blogs={blogs.filter((blog)=> blog.author == 'vincenttommi')} title="vincent's blog"/>
+   {/* filter method fires a callback function in each  element in the array  */}
     {/* blogs and title are components */}
     {/* rendering our component */}
     </div>
