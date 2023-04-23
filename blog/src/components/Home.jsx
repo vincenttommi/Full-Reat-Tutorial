@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import BlogLists from './BlogLists';
 
 
 const Home = () => {
@@ -14,22 +15,9 @@ const Home = () => {
 
 return (
     <div className="Home">  
-
-      {blogs.map((blog)=>(
- 
-
-// we use map method that uses callback function to to callout values from  element whenevere array is iterating as an item
-    <div className="blog-preview" key={blog.id}>
-      {/* React uses key property to keep track   when updating values in dom */}
-
-      <h2>{blog.title}</h2>
-      <p>Writted  by {blog.author}</p>
-      
-      
-
-
-    </div>
-      ))}
+    <BlogLists blogs={blogs} title="all blogs!"/>
+    {/* blogs and title are components */}
+    {/* rendering our component */}
     </div>
   );
 }
