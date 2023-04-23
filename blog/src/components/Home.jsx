@@ -1,43 +1,37 @@
-import React from 'react'
-import { useState } from 'react';
-// used to handle reactive  values in js
+import React, { useState } from 'react'
+
+
 const Home = () => {
 
 
-  const [name, setName] = useState("vincent");
-  // destructuring arrays used to captured  value  from usestate method
-  const [age, setAge] = useState(25);
-   const handleClick = ()=>{
-// function that ensures our  name to change when the button is being clicked
-setName("tommi");
-//function used to change value  in array name 
-setAge(24);
+ const [blogs, setBlogs]= useState([
+// destructuring  that captures values in array  
+// setBlogs is a function that updates new values in the arrays blogs
+ {title:"my new website", body:"lorem ipsum...", author:"vincenttommi",id: 1},
+ {title:"my new website", body:"lorem ipsum...", author:"tommi",id: 2},
+ {title:"my new website", body:"lorem ipsum...", author:"richie",id: 3},
+ ]);
+
+return (
+    <div className="Home">  
+
+      {blogs.map((blog)=>(
+ 
+
+// we use map method that uses callback function to to callout values from  element whenevere array is iterating as an item
+    <div className="blog-preview" key={blog.id}>
+      {/* React uses key property to keep track   when updating values in dom */}
+
+      <h2>{blog.title}</h2>
+      <p>Writted  by {blog.author}</p>
+      
+      
 
 
-
-   }
-
-
-
-  const handleClickAgain = (name,e) =>{
-
-
-      console.log('hello' + name,e.target);
-      // concatinating  the  parameter passed in our function inside an alert
-
-  } 
-  return (
-      <div className="Home">
-
-       <h2>Home Page</h2>
-       <p>{name} is {age} old</p>
-       <button onClick={handleClick} >Click Me</button>
-       <br></br>
-       <button onClick={(e)=> handleClickAgain('msenge', e)}>Click Me Again</button>
- {/* //invoking anyomous  function to pass an argument when a button is clicked and the curly braces signifies the dynamic value */}
-     
-      </div>
-  )
+    </div>
+      ))}
+    </div>
+  );
 }
 
-export default Home
+export default Home;
