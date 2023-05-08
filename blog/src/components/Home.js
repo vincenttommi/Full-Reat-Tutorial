@@ -22,17 +22,22 @@ const newBlogs = blogs.filter(blog => blog.id !== id);
 
  setBlogs(newBlogs);
 //  setting  new values of array filtered from that array blog
-
  }
+
+ const [name, SetName] = useState("vincent");
+//  
+
 
 
  useEffect(() => {
+   console.log("use effect run");  
+   console.log(name);
 
-   console.log(blogs);
 
- });
+ }, [name]);
+//  [] dependancy array only enures the function runs once 
+// for every render when clicked
 
-//this function runs for every render
 
 return (
     <div className="Home">  
@@ -41,6 +46,11 @@ return (
    {/* filter method fires a callback function in each  element in the array  */}
     {/* blogs and title are components */}
     {/* rendering our component */}
+
+    <button onClick={() => SetName("tommi")}>ChangeName</button>
+    {/* an OnClick function that  has anoymous function that use 
+    SetName function to invoke an argument in useState method to change its initail value */}
+    <p>{ name }</p>
     </div>
   );
 }
