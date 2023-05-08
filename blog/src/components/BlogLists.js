@@ -1,7 +1,7 @@
 // rafce  react component utilizing an arrow function
 import React from 'react'
 
-const BlogLists = ({blogs,title,handleDelete}) => {
+const BlogLists = ({blogs,title}) => {
 
   // accepting a function as a prop
     
@@ -15,8 +15,6 @@ const BlogLists = ({blogs,title,handleDelete}) => {
       {/* React uses key property to keep track   when updating values in dom */}
       <h2>{blog.title}</h2>
       <p>Writted  by {blog.author}</p>
-      <button   onClick={() => handleDelete(blog.id)}>Delete Blog</button>
-      {/* passsing ana anoymous function to take the id of our function to be deleted */}
     </div>
       ))}
 

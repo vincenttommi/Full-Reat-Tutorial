@@ -1,0 +1,35 @@
+{
+
+"blogs":[
+    {
+      "title":"my First blog",
+      "body": "why do we use it",
+      "author":"vincent",
+      "id":1
+    },
+
+    {
+
+     "title":"opening party",
+     "body":"why do we use it its a long established fact that will be distracted", 
+      "author":"richie",
+      "id":2
+ },
+ {
+ 
+    "title":"closing party",
+     "body":"why do we use it its a long established fact that will be distracted", 
+      "author":"espie",
+      "id":3
+
+ },{
+
+
+    "title":"Saturday party",
+    "body":"why do we use it its a long established fact that will be distracted", 
+     "author":"Moringa",
+     "id":4
+
+ }
+]
+}
