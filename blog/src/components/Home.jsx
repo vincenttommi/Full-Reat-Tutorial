@@ -13,10 +13,19 @@ const Home = () => {
  {title:"my new website", body:"lorem ipsum...", author:"richie",id: 3},
  ]);
 
+
+
+ const handleDelete =(id) =>{
+
+  const newBlogs = blogs.filter()
+  //array that holds  filtered arrayfs from array blogs
+ }
+
+
 return (
     <div className="Home">  
     <BlogLists blogs={blogs} title="all blogs!"/>
-    <BlogLists blogs={blogs.filter((blog)=> blog.author == 'vincenttommi')} title="vincent's blog"/>
+    <BlogLists blogs={blogs.filter((blog)=> blog.author == 'vincenttommi')} title="vincent's blog" handleDelete={handleDelete}/>
    {/* filter method fires a callback function in each  element in the array  */}
     {/* blogs and title are components */}
     {/* rendering our component */}
@@ -24,4 +33,4 @@ return (
   );
 }
 
-export default Home;
+export default Home; 
