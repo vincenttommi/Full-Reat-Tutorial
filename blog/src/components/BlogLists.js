@@ -15,7 +15,7 @@ const BlogLists = ({blogs,title,handleDelete}) => {
       {/* React uses key property to keep track   when updating values in dom */}
       <h2>{blog.title}</h2>
       <p>Writted  by {blog.author}</p>
-      <Button onClick={() => handleDelete(blog.id)}>Delete Blog</Button>
+      <button   onClick={() => handleDelete(blog.id)}>Delete Blog</button>
       {/* passsing ana anoymous function to take the id of our function to be deleted */}
     </div>
       ))}

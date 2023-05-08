@@ -11,21 +11,26 @@ const Home = () => {
  {title:"my new website", body:"lorem ipsum...", author:"vincenttommi",id: 1},
  {title:"my new website", body:"lorem ipsum...", author:"tommi",id: 2},
  {title:"my new website", body:"lorem ipsum...", author:"richie",id: 3},
+ 
  ]);
 
 
 
- const handleDelete =(id) =>{
+function handleDelete(id){
+const newBlogs = blogs.filter(blog => blog.id !== id);
+//array that holds filtered arrays from array blogs
 
-  const newBlogs = blogs.filter()
-  //array that holds  filtered arrayfs from array blogs
+ setBlogs(newBlogs);
+//  setting  new values of array filtered from that array blog
+
  }
+
 
 
 return (
     <div className="Home">  
-    <BlogLists blogs={blogs} title="all blogs!"/>
-    <BlogLists blogs={blogs.filter((blog)=> blog.author == 'vincenttommi')} title="vincent's blog" handleDelete={handleDelete}/>
+    <BlogLists blogs={blogs} title="all blogs!"  handleDelete={handleDelete}/>
+    <BlogLists blogs={blogs.filter((blog)=> blog.author == 'vincenttommi')} title="vincent's blog" />
    {/* filter method fires a callback function in each  element in the array  */}
     {/* blogs and title are components */}
     {/* rendering our component */}
